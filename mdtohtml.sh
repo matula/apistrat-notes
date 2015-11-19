@@ -1,5 +1,5 @@
 #!/bin/bash
 
 for i in *.md;
-do pandoc -f markdown $i > html/${i%.*}.html;
+do pandoc -s -c style.css -t html5 -B open.html -A close.html $i  -o html/${i%.*}.html;
 done;
