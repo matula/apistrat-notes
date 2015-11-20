@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+<h1 id="microservices-architecture"><a href="http://www.slideshare.net/irakli/microservices-architecture-the-blind-spots">Microservices Architecture</a></h1>
+<h2 id="what-drives-microservice-architecture">What drives microservice architecture?</h2>
+<ul>
+<li>tech heterogeneity</li>
+<li>scalability</li>
+<li>independant deployments</li>
+</ul>
+<p>Docker is a &quot;gateway drug&quot; for MSA - Containers, containers, containers</p>
+<p>Containers will drive MSA adoptions, becomes defacto standards. MSA won't be &quot;a choice&quot;</p>
+<h2 id="current-focus-is-too-code-oriented">Current focus is too code oriented</h2>
+<p>Hypermedis architecture help with MSA, keep them independant</p>
+<h2 id="data">Data</h2>
+<p>microservice should encapsulate their own data</p>
+<p>Domain driven design</p>
+<p>DDD &amp; Bounded contexts</p>
+<p>Bounded Context = Capabilities</p>
+<blockquote>
+<p>&quot;Think about capabilities, not data&quot; - Sam Newman, Building Microservices</p>
+</blockquote>
+<h2 id="how-small-should-microservices-be">How small should microservices be?</h2>
+<blockquote>
+<p>&quot;BC should be as big as it needs to be to full express Ubiquitous Language&quot; - Vernon, Implementing DDD</p>
+</blockquote>
+<p>Business doesn't want small BC. MAny teams speaking different languages. Tech likes smaller CI.</p>
+<p>In general, DDD along won't give you small enough MS for solve dats embedding reqs.</p>
+<h3 id="event-sourcing-cqrs---data-storage-alts.">Event Sourcing &amp; CQRS - data storage alts.</h3>
+<blockquote>
+<p>Event sourcing is about storing <strong>Facts</strong> &quot;state&quot; is a first-level derivative off of your facts. They are <strong>transient</strong></p>
+</blockquote>
+<p>Command and Query Responsibility Segregation (CQRS)</p>
+<p>Do not overuse Elastic Search or CQRS - use when necessary. tool to be used sparingly</p>
+<p>Transactions? Use &quot;Sagas&quot;: Long-Lived Distributed Transactions. vasters.com</p>
+<p>https://github.com/apiacademy/microservices-deployment</p>
+</div>
+</body>
+</html>
